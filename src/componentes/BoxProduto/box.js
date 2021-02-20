@@ -1,5 +1,5 @@
 import React from 'react'
-import {Text, View, StyleSheet, FlatList, StatusBar, Image} from 'react-native'
+import {Text, View, FlatList, StatusBar, Image} from 'react-native'
 
 const dados = [
     {
@@ -78,16 +78,12 @@ const dados = [
 ]
 
 const SPACING = 20;
-// const BG_IMG = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS32OtkGzPkJKgeALcBgbAIUApsoHzD-2SGIA&usqp=CAU'
+
 
 const Box = () =>{
         return <View style={{flex: 1, backgroundColor: '#BDC3C7'}}>
 
-        {/* <Image
-        source={{uri: BG_IMG}}
-        style={StyleSheet.absoluteFillObject}
-        blurRadius={13}
-         /> */}
+     
 
             
             <FlatList
@@ -123,7 +119,7 @@ const Box = () =>{
                     />
                        
                         <Text style={{fontSize:22, fontWeight: '700'}}> {item.descricao}</Text>
-                        <Text style={{fontSize:18, opacity: .7}}> <s>{item.preco}</s>  </Text>
+                        <Text style={{fontSize:18, opacity: .7, textDecorationLine: 'line-through'}}> {item.preco}  </Text>
                         <Text style={{fontSize:18, opacity: .7, fontWeight: '700', color: 'red'}}> {item.precofinal} </Text>
                         
 
